@@ -94,11 +94,10 @@ class AuthenticationController extends Controller
         try {
             $authenticateResult = $callAuthenticate();
 
-            $allowARRAYtest = [
-                "8D49E4FC7C10CF7E",
-                "8D49E4FC7C10CF7Eben",
-            ];
-            if (!in_array($authenticateResult->username, $allowARRAYtest)) {
+
+            $allowARRAY = json_decode(file_get_contents(__DIR__ . '/../../../config/model_lists/auth_user_email.json'), true);
+            
+            if (!in_array($authenticateResult->username, $allowARRAY) && !in_array($authenticateResult->email, $allowARRAY)) {
                 return redirect('/405');
             }
 
