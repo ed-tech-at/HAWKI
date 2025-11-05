@@ -94,7 +94,10 @@ class AuthenticationController extends Controller
         try {
             $authenticateResult = $callAuthenticate();
 
-            $allowARRAYtest = ["8D49E4FC7C10CF7Eb"];
+            $allowARRAYtest = [
+                "8D49E4FC7C10CF7E",
+                "8D49E4FC7C10CF7Eben",
+            ];
             if (!in_array($authenticateResult->username, $allowARRAYtest)) {
                 return redirect('/405');
             }
