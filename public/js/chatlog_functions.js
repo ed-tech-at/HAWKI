@@ -393,7 +393,9 @@ function setModel(modelID = null){
             });
         }
         else{
-            selector.classList.remove('active');
+            if (selector?.classList?.contains('active')) {
+                selector.classList.remove('active');
+            }
         }
     });
 
