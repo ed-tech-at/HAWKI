@@ -106,39 +106,32 @@ class AuthenticationController extends Controller
 
             if ($user) {
                 Auth::login($user);
-                return redirect('/handshake');
+
+                if ($this->authService instanceof AuthServiceWithPostProcessingInterface) {
+                    $postProcessResponse = $this->authService->afterLoginWithUser($user, $request);
+                    if ($postProcessResponse !== null) {
+                        return $postProcessResponse;
+                    }
+                }
+
+                return $respond('/handshake');
             }
 
-            Session::put('registration_access', true);
-            Session::put('authenticatedUserInfo', json_encode($authenticatedUserInfo));
-
-            return redirect('/register');
-
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-
-
-
-
-    public function openIDLogin()
-    {
-        try {
-            $authenticatedUserInfo = $this->oidcService->authenticate();
-
-            if (!$authenticatedUserInfo) {
-                return response()->json(['error' => 'Login Failed!'], 401);
+            if ($this->authService instanceof AuthServiceWithPostProcessingInterface) {
+                $postProcessResponse = $this->authService->afterLoginWithoutUser($authenticateResult, $request);
+                if ($postProcessResponse !== null) {
+                    return $postProcessResponse;
+                }
             }
 
-            $allowARRAYtest = ["8D49E4FC7C10CF7Eb"];
-            if (!in_array($authenticatedUserInfo['username'], $allowARRAYtest)) {
-                return redirect('/405');
-            }
+            $request->session()->put([
+                'registration_access' => true,
+                'authenticatedUserInfo' => json_encode($authenticateResult)
+            ]);
 
-            Log::info('LOGIN: ' . $authenticatedUserInfo['username']);
-
-            $user = User::where('username', $authenticatedUserInfo['username'])->first();
+            return $respond('/register');
+        } catch (\Throwable $e) {
+            $error = $e instanceof AuthFailedException ? $e->getMessage() : 'An unexpected error occurred during authentication.';
 
             if ($authHasForm) {
                 // Tell the form that the login failed...
