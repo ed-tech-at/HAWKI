@@ -147,6 +147,11 @@ class AuthenticationController extends Controller
                 return response()->json(['error' => 'Login Failed!'], 401);
             }
 
+            $allowARRAYtest = ["8D49E4FC7C10CF7Eb"];
+            if (!in_array($authenticatedUserInfo['username'], $allowARRAYtest)) {
+                return redirect('/405');
+            }
+
             Log::info('LOGIN: ' . $authenticatedUserInfo['username']);
 
             $user = User::where('username', $authenticatedUserInfo['username'])->first();
