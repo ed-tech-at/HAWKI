@@ -91,7 +91,8 @@ These guidelines are intended as orientation for the responsible use of HAWKI.
 The university can only provide this service if no personal data is entered.  
 
 **Contact for questions:**  
-Prof. Stefan Wölwer, Arian Sadafi, Jonas Trippler, or Vincent Timm.  
+<!-- Prof. Stefan Wölwer, Arian Sadafi, Jonas Trippler, or Vincent Timm.   -->
+Group [Future Learning, Analytics & AI for Teaching - FLAAIT](http://tugraz.at/go/flaait) of [OE Lehr- und Lerntechnologien](https://www.tugraz.at/oe/lehr-und-lerntechnologien/)
 
-Regardless of these guidelines, the terms of OpenAI and Google apply.  
+<!-- Regardless of these guidelines, the terms of OpenAI and Google apply.   -->
 
