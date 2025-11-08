@@ -93,8 +93,7 @@ Dieser Leitfaden dient als Orientierungshilfe für den verantwortungsbewussten U
 Die Hochschule kann diesen Service nur anbieten, wenn Sie keine persönlichen Daten eingeben.  
 
 **Kontakt bei Fragen:**  
-<!-- Prof. Stefan Wölwer, Arian Sadafi, Jonas Trippler oder Vincent Timm.   -->
+
 Gruppe [Future Learning, Analytics & AI for Teaching - FLAAIT](http://tugraz.at/go/flaait) der [OE Lehr- und Lerntechnologien](https://www.tugraz.at/oe/lehr-und-lerntechnologien/)
 
-<!-- Ungeachtet dieses Leitfadens gelten die Nutzungsbedingungen von OpenAI und Google.   -->
 
