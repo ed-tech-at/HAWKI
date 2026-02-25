@@ -94,6 +94,14 @@ class AuthenticationController extends Controller
         try {
             $authenticateResult = $callAuthenticate();
 
+
+            $allowARRAY = json_decode(file_get_contents(__DIR__ . '/../../../config/model_lists/auth_user_email.json'), true);
+            
+            if (!in_array($authenticateResult->username, $allowARRAY) && !in_array($authenticateResult->email, $allowARRAY)) {
+                return redirect('/405');
+            }
+
+
             if ($authenticateResult instanceof Response) {
                 return $authenticateResult;
             }

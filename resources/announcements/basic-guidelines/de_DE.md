@@ -1,6 +1,7 @@
 # Leitfaden für den Umgang mit HAWKI
 
-Willkommen zum Leitfaden für den Umgang mit HAWKI, das Sprachmodelle von OpenAI, Google und OpenSource-Modelle über die GWDG zur Verfügung stellt.  
+<!-- Willkommen zum Leitfaden für den Umgang mit HAWKI, das Sprachmodelle von OpenAI, Google und OpenSource-Modelle über die GWDG zur Verfügung stellt.   -->
+Willkommen zum Leitfaden für den Umgang mit HAWKI, das OpenSource-Modelle über die TU Graz und GWDG zur Verfügung stellt.  
 
 Dieser Leitfaden soll allen Hochschulangehörigen und Hochschulmitgliedern eine klare Richtlinie bieten, wie mit dieser Technologie verantwortungsbewusst umgegangen werden soll. Bitte beachten Sie, dass dieser Leitfaden die Nutzungsbedingungen von OpenAI und Google ergänzt und keinen Anspruch auf Vollständigkeit erhebt. Es liegt in der Verantwortung der Nutzer*innen, die Nutzungsbedingungen einzuhalten.  
 
@@ -92,7 +93,7 @@ Dieser Leitfaden dient als Orientierungshilfe für den verantwortungsbewussten U
 Die Hochschule kann diesen Service nur anbieten, wenn Sie keine persönlichen Daten eingeben.  
 
 **Kontakt bei Fragen:**  
-Prof. Stefan Wölwer, Arian Sadafi, Jonas Trippler oder Vincent Timm.  
 
-Ungeachtet dieses Leitfadens gelten die Nutzungsbedingungen von OpenAI und Google.  
+Gruppe [Future Learning, Analytics & AI for Teaching - FLAAIT](http://tugraz.at/go/flaait) der [OE Lehr- und Lerntechnologien](https://www.tugraz.at/oe/lehr-und-lerntechnologien/)
+
 
